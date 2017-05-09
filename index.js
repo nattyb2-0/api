@@ -12,7 +12,13 @@ app.use(express.static(__dirname + '/public'));
 // app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/public'));
-
+app.get('/api',(req,res)=>{
+  res.json({
+    name:'natty',
+    age:12,
+    occupation: 'student'
+  })
+})
 // app.get('/', function(request, response) {
 //   response.render('pages/index');
 // });
