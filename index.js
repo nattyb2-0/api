@@ -18,7 +18,10 @@ app.use(function(req, res, next) {
 
 app.use(express.static(__dirname + '/public'));
 app.get('/api',(req,res)=>{
-  res.send('this will not work')
+  res.json({
+    name:'natty',
+    age:26,
+    occupation:'hustler'})
 })
 // app.get('/', function(request, response) {
 //   response.render('pages/index');
