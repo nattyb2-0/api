@@ -10,6 +10,11 @@ app.use(express.static(__dirname + '/public'));
 // views is directory for all template files
 // app.set('views', __dirname + '/views');
 // app.set('view engine', 'ejs');
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use(express.static(__dirname + '/public'));
 app.get('/api',(req,res)=>{
