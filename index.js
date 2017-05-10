@@ -13,11 +13,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(express.static(__dirname + '/public'));
 app.get('/api',(req,res)=>{
-  res.json({
-    name:'natty',
-    age:12,
-    occupation: 'student'
-  })
+  res.send('this will not work')
 })
 // app.get('/', function(request, response) {
 //   response.render('pages/index');
